@@ -51,17 +51,7 @@ final class ViewController: UIViewController {
     }
     
     private func updateLabel() {
-        let force = String(format: "%.2f", animation.force)
-        let duration = String(format: "%.2f", animation.duration)
-        let delay = String(format: "%.2f", animation.delay)
-            
-        parametersLabel.text = """
-        preset: \(animation.preset)
-        curve: \(animation.curve)
-        force: \(force)
-        duration: \(duration)
-        delay: \(delay)
-        """
+        parametersLabel.text = animation.description
     }
 }
 
